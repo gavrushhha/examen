@@ -10,6 +10,9 @@
     <p>Description: {{ object.description }}</p>
     <p>Genre: {{ object.genre }}</p>
     <p>Year: {{ object.year }}</p>
-    <p>Author: {{ object.author }}</p>
+    <p>Authors:
+        {% for author in object.authors.all %}
+            {{ author.name }}, 
+        {% endfor %}
 </body>
 </html>

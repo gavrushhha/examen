@@ -24,9 +24,9 @@ class BookCreateView(LoginRequiredMixin, CreateView):
             type: string
             description: Название книги.
             required: true
-          - name: author
-            type: string
-            description: Автор книги.
+          - name: authors
+            type: array
+            description: Список авторов книги.
             required: true
           - name: genre
             type: string

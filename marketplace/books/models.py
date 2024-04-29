@@ -1,14 +1,19 @@
 from django.db import models
 from django.contrib.auth.models import User
-from .author import Author
 
+class Author(models.Model):
+    name = models.CharField(max_length=100)
+    books = models.ManyToManyField('Book')
+
+    def __str__(self):
+        return self.name
 
 class Book(models.Model):
     title = models.CharField(max_length=100)
     description = models.TextField()
     genre = models.CharField(max_length=50)
     year = models.PositiveIntegerField()
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)
+    authors = models.ManyToManyField(Author)
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     STATUS_CHOICES = [
         ('pending', 'Pending'),
