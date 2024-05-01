@@ -1,12 +1,12 @@
 from rest_framework import serializers
-from django.contrib.auth.models import User
 
-class UserSerializer(serializers.ModelSerializer):
+from accounts.models import Client
+
+
+class ClientSerializer(serializers.ModelSerializer):
     class Meta:
-        model = User
-        fields = ['username', 'password']
-        extra_kwargs = {'password': {'write_only': True}}
+        model = Client
+        fields = '__all__'
 
     def create(self, validated_data):
-        user = User.objects.create_user(**validated_data)
-        return user
+        return Client.objects.create(**validated_data)
