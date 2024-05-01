@@ -10,3 +10,6 @@ class ClientSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return Client.objects.create(**validated_data)
+
+    # TODO delete, update...
+    # def update():
