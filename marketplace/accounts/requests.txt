@@ -1,19 +1,18 @@
 accounts requests for Api:
 --register
 {
-  "username": "testuser",
-  "password": "test",
-  "full_name": "Test Test",
-  "phone": "1234567890",
-  "email": "test@example.com"
+  "username": "example_user",
+  "password": "example_password",
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "example@example.com"
 }
-
 
 
 --login
 {
-    "username": "testuser",
-    "password": "test"
+  "username": "example_user",
+  "password": "example_password"
 }
 
 --logout
