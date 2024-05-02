@@ -36,3 +36,13 @@ http://127.0.0.1:8000/books/detail/3/
 
 --all books
 http://127.0.0.1:8000/books/list
+
+
+tests:
+
+python manage.py test accounts.tests
+
+это тесты с процентами 
+pip install coverage
+coverage run manage.py test
+coverage report
