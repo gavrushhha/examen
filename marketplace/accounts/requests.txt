@@ -3,12 +3,12 @@ accounts requests for Api:
 {
   "username": "testuser",
   "password": "test",
-  "profile": {
-    "full_name": "Test Test",
-    "phone": "1234567890",
-    "email": "test@example.com"
-  }
+  "full_name": "Test Test",
+  "phone": "1234567890",
+  "email": "test@example.com"
 }
+
+
 
 --login
 {
