@@ -1,0 +1,38 @@
+accounts requests for Api:
+--register
+{
+  "username": "example_user",
+  "password": "example_password",
+  "first_name": "John",
+  "last_name": "Doe",
+  "email": "example@example.com"
+}
+
+
+--login
+{
+  "username": "example_user",
+  "password": "example_password"
+}
+
+--logout
+http://127.0.0.1:8000/accounts/logout/
+
+books requests for Api:
+--create
+{
+    "title": "Новое название книги",
+    "description": "Новое описание книги",
+    "genre": "Новый жанр книги",
+    "year": 2023,
+    "authors": [2, 3], 
+    "owner": 1,
+    "status": "pending"
+}
+
+
+--delete
+http://127.0.0.1:8000/books/detail/3/
+
+--all books
+http://127.0.0.1:8000/books/list
